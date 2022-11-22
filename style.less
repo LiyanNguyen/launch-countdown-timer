@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Text:wght@700&display=swap');
+
+// PRIMARY COLORS
+@gb: hsl(237, 18%, 59%);
+@sr: hsl(345, 95%, 68%);
+
+// NEUTRAL COLORS
+@white: hsl(0, 0%, 100%);
+@ddb: hsl(236, 21%, 26%);
+@vdb: hsl(235, 16%, 14%);
+@vb: hsl(234, 17%, 12%);
+
+:root {
+	font-size: 14px;
+	font-family: 'Red Hat Text', sans-serif;
+	font-weight: 700;
+}
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+// MOBILE FIRST APPROACH
+main {
+	background-color: @vdb;
+	min-height: calc(100vh - 197px);
+	background-image: url(images/bg-stars.svg);
+	padding: 2rem;
+	display: flex;
+	flex-direction: column;
+	gap: 3rem;
+	justify-content: center;
+
+	h1 {
+		color: @white;
+		text-transform: uppercase;
+		font-size: 1.5rem;
+		text-align: center;
+		letter-spacing: .3rem;
+	}
+}
+
+footer {
+	background-color: @vdb;
+	min-height: 197px;
+	background-image: url(images/pattern-hills.svg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	display: flex;
+	align-items: flex-end;
+	justify-content: center;
+	gap: 3rem;
+	padding: 2rem;
+
+	img {
+		cursor: pointer;
+		transition: 0.25s;
+
+		&:hover {
+			filter: hue-rotate(110deg);
+		}
+	}
+}
+
+.timeContainer {
+	display: flex;
+	justify-content: space-between;
+}
+
+.timeCard {
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+	align-items: center;
+
+	p {
+		color: @gb;
+		text-transform: uppercase;
+		letter-spacing: .2rem;
+		font-size: .5rem;
+	}
+}
+
+.card {
+	width: 5rem;
+	height: 5rem;
+	background-color: transparent;
+	border-radius: .25rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+
+	p {
+		color: @sr;
+		font-size: 2.5rem;
+		position: absolute;
+		z-index: 1;
+	}
+
+	.upperSide {
+		position: absolute;
+		top: 0;
+		min-width: 5rem;
+		min-height: 2.5rem;
+		border-radius: .5rem;
+		background-color: darken(@ddb, 5%);
+		transition: .5s;
+	}
+
+	.upperSide.flip {
+		transform: rotateX(180deg);
+	}
+
+	.bottomSide {
+		position: absolute;
+		bottom: 0;
+		min-width: 5rem;
+		min-height: 2.5rem;
+		border-radius: .5rem;
+		background-color: @ddb;
+		transition: .5s;
+	}
+
+
+	.bottomSide.flip {
+		transform: rotateX(180deg);
+	}
+}
+
+// TABLET AND ABOVE
+@media screen and (min-width: 750px) {
+	main {
+		gap: 5rem;
+	}
+
+	.timeContainer {
+		justify-content: center;
+		gap: 2rem;
+	}
+
+	.timeCard {
+		p {
+			font-size: .8rem;
+		}
+	}
+
+	.card {
+		width: 8rem;
+		height: 8rem;
+
+		p {
+			font-size: 4rem;
+		}
+
+		.upperSide {
+			width: 8rem;
+			height: 4rem;
+		}
+
+		.bottomSide {
+			width: 8rem;
+			height: 4rem;
+		}
+	}
+}

@@ -5,11 +5,13 @@ A simple countdown timer with animations
 This is a solution to the [Launch countdown timer challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/launch-countdown-timer-N0XkGfyz-).
 
 ### Screenshot
+![image](https://user-images.githubusercontent.com/50958126/203238932-ad6ff9f9-a2b7-4c09-84eb-99f1f79d9e92.png)
+![image](https://user-images.githubusercontent.com/50958126/203239074-b10248e2-c2fd-42ed-8e01-e2211c8da394.png)
 
 
 ### Links
-- Source URL: 
-- Live Site URL: 
+- Source URL: https://github.com/LiyanNguyen/launch-countdown-timer
+- Live Site URL: https://liyannguyen.github.io/launch-countdown-timer/
 
 ### My Process
 - Design the Mobile viewport WHILE desinging the Desktop Viewport at the same time using
